@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rodeo Beef | Artisanal Authority in Premium Meat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "secondary-fixed": "#ffe088",
+                "outline": "#aa8984",
+                "inverse-surface": "#e5e2e1",
+                "error": "#ffb4ab",
+                "on-error-container": "#ffdad6",
+                "background": "#131313",
+                "tertiary-container": "#0025c8",
+                "surface-container-low": "#1c1b1b",
+                "secondary": "#e9c349",
+                "on-surface": "#e5e2e1",
+                "on-secondary": "#3c2f00",
+                "surface-container-high": "#2a2a2a",
+                "inverse-on-surface": "#313030",
+                "charcoal-light": "#1A1A1C",
+                "primary-fixed-dim": "#ffb4a8",
+                "surface-container-lowest": "#0e0e0e",
+                "tertiary-fixed": "#dfe0ff",
+                "on-surface-variant": "#e3beb8",
+                "on-tertiary": "#001a98",
+                "on-tertiary-container": "#9ea9ff",
+                "on-tertiary-fixed": "#000d60",
+                "secondary-fixed-dim": "#e9c349",
+                "primary": "#ffb4a8",
+                "surface-dim": "#131313",
+                "deep-burgundy": "#4A0404",
+                "on-secondary-fixed-variant": "#574500",
+                "primary-container": "#8b0000",
+                "tertiary": "#bcc3ff",
+                "surface": "#131313",
+                "tertiary-fixed-dim": "#bcc3ff",
+                "outline-variant": "#5a403c",
+                "surface-container": "#201f1f",
+                "surface-container-highest": "#353534",
+                "surface-bright": "#3a3939",
+                "on-primary-fixed-variant": "#920703",
+                "on-background": "#e5e2e1",
+                "secondary-container": "#af8d11",
+                "on-tertiary-fixed-variant": "#0d2ccc",
+                "on-primary-container": "#ff907f",
+                "on-secondary-container": "#342800",
+                "surface-variant": "#353534",
+                "primary-fixed": "#ffdad4",
+                "surface-tint": "#ffb4a8",
+                "on-primary-fixed": "#410000",
+                "on-error": "#690005",
+                "error-container": "#93000a",
+                "on-primary": "#690000",
+                "on-secondary-fixed": "#241a00",
+                "off-white": "#F9F7F2",
+                "inverse-primary": "#b52619"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-gap": "160px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "unit": "8px"
+        },
+        "fontFamily": {
+                "label-caps": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg": [
+                        "Playfair Display"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg": [
+                        "Playfair Display"
+                ],
+                "headline-lg-mobile": [
+                        "Playfair Display"
+                ]
+        },
+        "fontSize": {
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "72px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-card {
+            background: rgba(26, 26, 28, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .burgundy-accent {
+            border-left: 4px solid #8b0000;
+        }
+    </style>
+</head>
+<body class="font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-md border-b border-white/10">
+<a href="#">
+<img alt="Rodeo Beef Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsU2-x-FvF-BujKqHtNLQnFTqrV6S3Pslny7UGxB9Nrr_-27phs2VZcFYLYd8uy8h4q9o9d5WlTQ0ULVdJGBboAVuRJaaw5Ebr-2f4LL3Q1Z3JRhJrOc7I_sQeQuGOBgQRH7C6o6wIU1v0IPbBZpDjgN-mbWexKozBR5YOXvW5RY9-sDSAPL667OPXmtnayZSKF7hzQOtMa43aHs7cm2sFs9pTOUyh3wS6TcR1v2P00GucMqioxJmJC6g"/>
+</a>
+<div class="hidden md:flex gap-8 items-center font-body-lg text-body-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#historia">Nosotros</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="#productos">Productos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#contacto">Contacto</a>
+<button class="bg-primary-container text-white px-6 py-2 font-label-caps hover:opacity-80 transition-opacity active:scale-95 transition-transform uppercase">
+                Comprar Ahora
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero background" class="w-full h-full object-cover opacity-60 scale-105 transition-transform duration-10000 ease-linear" src="https://lh3.googleusercontent.com/aida/AP1WRLsU2-x-FvF-BujKqHtNLQnFTqrV6S3Pslny7UGxB9Nrr_-27phs2VZcFYLYd8uy8h4q9o9d5WlTQ0ULVdJGBboAVuRJaaw5Ebr-2f4LL3Q1Z3JRhJrOc7I_sQeQuGOBgQRH7C6o6wIU1v0IPbBZpDjgN-mbWexKozBR5YOXvW5RY9-sDSAPL667OPXmtnayZSKF7hzQOtMa43aHs7cm2sFs9pTOUyh3wS6TcR1v2P00GucMqioxJmJC6g"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-0 max-w-4xl mt-20">
+<span class="font-label-caps text-secondary tracking-widest block mb-6 reveal">ARTISANAL AUTHORITY</span>
+<h1 class="font-display-lg text-[40px] md:text-display-lg leading-tight mb-8 reveal">
+                Calidad que se Selecciona, <br/>
+<span class="italic text-primary">No se Improvisa</span>
+</h1>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center reveal">
+<a class="bg-primary-container text-white px-10 py-4 font-label-caps text-sm tracking-widest hover:bg-deep-burgundy transition-all border border-primary-container" href="#productos">
+                    DESCUBRE NUESTROS CORTES
+                </a>
+<a class="border border-white/30 text-white px-10 py-4 font-label-caps text-sm tracking-widest hover:bg-white/10 transition-all" href="#historia">
+                    NUESTRA HISTORIA
+                </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white/50 text-3xl">keyboard_double_arrow_down</span>
+</div>
+</header>
+<!-- Historia Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-2 gap-gutter items-center" id="historia">
+<div class="reveal">
+<span class="font-label-caps text-primary tracking-widest block mb-4">TRADICIÓN FAMILIAR</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Nuestra historia</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant max-w-xl">
+<p>Rodeo Beef nace de una convicción simple pero poderosa: la calidad no se improvisa, se selecciona. Aunque somos una marca joven, nuestra esencia viene de una profunda tradición familiar en la industria cárnica.</p>
+<p>Crecimos entendiendo que el buen comer comienza mucho antes de encender la parrilla; comienza con el origen.</p>
+<p>Elegimos el nombre "Rodeo" porque representa el desafío y la maestría del campo; simboliza la fuerza de nuestra tierra y el lazo que nos une al compromiso de seleccionar únicamente lo mejor. No es solo un nombre, es nuestra actitud ante la calidad: dominar el proceso para ofrecerte el mejor corte.</p>
+<div class="pt-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<span class="font-label-caps italic text-secondary">Rodeo: Desafío, Maestría, Fuerza</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal h-[500px] md:h-[700px]">
+<div class="absolute inset-0 bg-charcoal-light border border-white/10 -rotate-2"></div>
+<img class="absolute inset-0 w-full h-full object-cover shadow-2xl rotate-1 hover:rotate-0 transition-all duration-700" data-alt="Nuestra Historia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBljzB9lyWYoL5RCIVhJgVCtNx9BxBdrbPPAUV55qrK_9cVe3ZL0CGTCa4hVCohqzh0w8nW2ddaHqj-Aigwnr9Q-Qd8tvYPfTobWLmBeL0tK1osHI_whxhVv4M-Fiu_rjbJl_q7Ij3X1m9T62onZ3fDxdOCHm5Mn-sEXGSKsnxrKU8hI6qo_YGfgsXSTGm0l4fB-V7cPE_e47GQKVoPMSgdP45nljUJkK6m9g8a12-ycaEUq_DF5MqJ713D0DWrSPwp7-fJhkgKVnk"/>
+</div>
+</section>
+<!-- Misión & Valores (Bento Grid) -->
+<section class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24 reveal">
+<h2 class="font-headline-lg text-headline-lg mb-4">Diferenciadores</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Llevar un sabor inigualable y una calidad superior a las mesas mexicanas, convirtiéndonos en el aliado estratégico de confianza para el sector gastronómico y hotelero.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Valor 1 -->
+<div class="glass-card p-10 burgundy-accent reveal">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">verified</span>
+<h3 class="font-headline-lg text-2xl mb-4">Selección Precisa</h3>
+<p class="font-body-md text-on-surface-variant">Realizamos un estudio meticuloso de proveedores para asegurar que cada pieza cumpla con los estándares más altos de jugosidad y textura.</p>
+</div>
+<!-- Valor 2 -->
+<div class="glass-card p-10 burgundy-accent reveal" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">handshake</span>
+<h3 class="font-headline-lg text-2xl mb-4">Aliado Estratégico</h3>
+<p class="font-body-md text-on-surface-variant">Especializados en el sector hotelero y restaurantero, garantizando consistencia crítica para las cocinas profesionales.</p>
+</div>
+<!-- Valor 3 -->
+<div class="glass-card p-10 burgundy-accent reveal" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">workspace_premium</span>
+<h3 class="font-headline-lg text-2xl mb-4">Sello de Origen</h3>
+<p class="font-body-md text-on-surface-variant">Tradición familiar que respalda una amplia gama de productos cárnicos con garantía de suavidad inigualable.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Calidad y Procesos Background Section -->
+<section class="relative py-32 bg-background flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img alt="Raw Ribeye/Meat cuts" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ4QAt-5EJVaIEV72N9atOxC1y8Sq1b_h1VyAtGJfD03kwlje0CaadzsMji5OALmeJm3ECm_c8vJt6iX9pJ1-Yvm4TrmDSHscsfbFLGBOLcdtYlS0P3ViZ4uxHD1eMHORnlSWBPjdNrdKGE35738LfEzfA_eXK8EsY_-vpQj20uZbKKkESQ14V_VvzFP-9F586je2TGnjHofc47coQZ4qe2T2d889J5bKcHxpcOAOsjlUM-3e6uLMLT9WdN5cm6p_LW9xGgFs55vo"/>
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-mobile reveal">
+<span class="font-label-caps text-secondary tracking-widest block mb-4">NUESTRO COMPROMISO</span>
+<h2 class="font-display-lg text-headline-lg mb-6">Calidad y Procesos</h2>
+<p class="font-body-lg text-on-surface-variant">
+            Dominamos cada paso del proceso, desde la selección en origen hasta el corte final, garantizando que solo lo mejor llegue a su mesa o restaurante.
+        </p>
+</div>
+</section>
+<!-- Productos Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background" id="productos">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+<div class="max-w-2xl">
+<span class="font-label-caps text-primary tracking-widest block mb-4">NUESTROS CORTES ESTRELLA</span>
+<h2 class="font-headline-lg text-headline-lg">Catálogo de Productos</h2>
+</div>
+<div class="h-[1px] flex-grow bg-white/10 mb-4 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Arrachera -->
+<div class="group reveal">
+<div class="aspect-[4/3] overflow-hidden bg-charcoal-light mb-8 relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" data-alt="Arrachera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwM2w3phTZgdqzFs6xqyggeyYSqLlA-rHZc2nLXpKMFKORXYmjcO89vbjIidYPc4kU3imja8Cp9e8_yZDxP19c6qkLQzHEpJDQjqOfFZqnmDy4Hceam4yjeZEzADfGQu2n6fRuEdz-aBn2tSqWjS-nxv-kZMm_PhZfHDmw3SXOFLamQhcqd5abLor9ppHqurxdjusgLCsJ2cMg8lJBCYNA8xVD2kMh8vIAU8xRqeFRTLVKwOWEk7_JvMGYeE9OGKkUg-GCMT77I0c"/>
+<div class="absolute top-6 left-6 bg-primary-container text-white px-4 py-1 font-label-caps text-[10px] tracking-widest uppercase">Más Vendido</div>
+</div>
+<div class="text-center px-4">
+<h3 class="font-headline-lg text-3xl mb-4 group-hover:text-primary transition-colors">ARRACHERA</h3>
+<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">Proteína de alta calidad procesada con precisión. Logramos el equilibrio ideal entre sabor rústico y una textura siempre tierna, diseñada para destacar en cada parrilla.</p>
+<a class="inline-block border-b border-primary text-primary font-label-caps py-2 hover:tracking-[0.2em] transition-all" href="#">COTIZAR AHORA</a>
+</div>
+</div>
+<!-- Filete -->
+<div class="group reveal" style="transition-delay: 200ms;">
+<div class="aspect-[4/3] overflow-hidden bg-charcoal-light mb-8 relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" data-alt="Filete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ik_JQ_fTMhKfGnyLYnsEtpiyw4qp_dy56lRD9DJSuIRbxIw-a27BYsPBF0XHqfsblSusYobbnJu64tHsHMKpeIM43Laj1ICpgM0SjWGa7t0T_lf-0tFRnzdVwl9SwMX5jjbTA9RDK_UAb2Zy_fVxd56N7Q3J4MaGe7YIisQ-2VOXzfA7SrTPcp8gWCpM4_MRArVs--NQhv3BQRUZgzIEZUleqmb2RV1qCg3SASc5Ht7nhFmtY54gY9lEqk5PoDMpmOumSP3c8Oo"/>
+</div>
+<div class="text-center px-4">
+<h3 class="font-headline-lg text-3xl mb-4 group-hover:text-primary transition-colors">FILETE</h3>
+<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">Calidad premium con sello de origen. Limpio, jugoso y listo para la alta cocina o la parrilla más exigente. Tradición y suavidad en un solo corte.</p>
+<a class="inline-block border-b border-primary text-primary font-label-caps py-2 hover:tracking-[0.2em] transition-all" href="#">COTIZAR AHORA</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto Section -->
+<section class="relative py-section-gap bg-surface-container-lowest overflow-hidden" id="contacto">
+<div class="absolute right-[-100px] bottom-[-50px] opacity-5 pointer-events-none">
+<img alt="Rodeo Beef Watermark" class="w-[500px]" src="https://lh3.googleusercontent.com/aida/AP1WRLsU2-x-FvF-BujKqHtNLQnFTqrV6S3Pslny7UGxB9Nrr_-27phs2VZcFYLYd8uy8h4q9o9d5WlTQ0ULVdJGBboAVuRJaaw5Ebr-2f4LL3Q1Z3JRhJrOc7I_sQeQuGOBgQRH7C6o6wIU1v0IPbBZpDjgN-mbWexKozBR5YOXvW5RY9-sDSAPL667OPXmtnayZSKF7hzQOtMa43aHs7cm2sFs9pTOUyh3wS6TcR1v2P00GucMqioxJmJC6g"/>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-12">Contáctanos</h2>
+<div class="space-y-10">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+<div>
+<p class="font-label-caps text-on-surface-variant mb-1">TELÉFONO</p>
+<p class="font-headline-lg text-2xl">3315260552</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">mail</span>
+<div>
+<p class="font-label-caps text-on-surface-variant mb-1">CORREO ELECTRÓNICO</p>
+<p class="font-body-lg">originalrodeobeef@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">share</span>
+<div>
+<p class="font-label-caps text-on-surface-variant mb-1">REDES SOCIALES</p>
+<div class="flex gap-6 mt-4">
+<a class="text-on-surface hover:text-primary transition-colors" href="#">Instagram: @rodeobeef</a>
+<a class="text-on-surface hover:text-primary transition-colors" href="#">Tiktok: @rodeo.beef</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="reveal" style="transition-delay: 200ms;">
+<form class="space-y-8 glass-card p-12">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant text-[10px]">NOMBRE COMPLETO</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary outline-none py-2 transition-colors" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant text-[10px]">CORREO ELECTRÓNICO</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary outline-none py-2 transition-colors" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant text-[10px]">MENSAJE</label>
+<textarea class="w-full bg-transparent border-b border-white/20 focus:border-primary outline-none py-2 transition-colors resize-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-white py-4 font-label-caps tracking-widest hover:bg-deep-burgundy transition-all" type="submit">
+                            ENVIAR CONSULTA
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest pt-section-gap pb-12 w-full">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-7xl mx-auto items-center">
+<div class="flex flex-col items-center md:items-start">
+<img alt="Rodeo Beef Logo" class="w-32 mb-6" src="https://lh3.googleusercontent.com/aida/AP1WRLsU2-x-FvF-BujKqHtNLQnFTqrV6S3Pslny7UGxB9Nrr_-27phs2VZcFYLYd8uy8h4q9o9d5WlTQ0ULVdJGBboAVuRJaaw5Ebr-2f4LL3Q1Z3JRhJrOc7I_sQeQuGOBgQRH7C6o6wIU1v0IPbBZpDjgN-mbWexKozBR5YOXvW5RY9-sDSAPL667OPXmtnayZSKF7hzQOtMa43aHs7cm2sFs9pTOUyh3wS6TcR1v2P00GucMqioxJmJC6g"/>
+</div>
+<div class="flex flex-col items-center gap-4 font-body-md text-on-surface-variant">
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos</a>
+<a class="hover:text-primary transition-colors" href="#">Envíos</a>
+</div>
+<p class="text-center opacity-50">© 2026 Rodeo Beef. Artisanal Authority in Premium Meat.</p>
+</div>
+<div class="flex justify-center md:justify-end gap-6 text-primary">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">face_nod</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">photo_camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">movie</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple reveal animation on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Initial check
+        reveal();
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', function() {
+            const scroll = window.pageYOffset;
+            const heroImg = document.querySelector('header img');
+            if(heroImg) {
+                heroImg.style.transform = `translateY(${scroll * 0.4}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body></html>
